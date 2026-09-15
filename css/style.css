@@ -1,0 +1,32 @@
+/* importing from google fonts */
+@import url('https://fonts.googleapis.com/css2?family=Mystery+Quest&display=swap');
+
+body {
+    background-image: url(../media/background_polka.jpeg);  /* .. in the path to go back to the directory */
+    background-size: 45%;                                   /* if i did cover/100% the dots would be too big */
+    background-attachment: fixed;                           /* keeps it static while scrolling */
+
+    /* if ever the image doesn't load, the website will resort to this color: */
+    background-color: #fcf8ef;                            /* light cream? color */                       
+}
+
+h1 {
+    font-family: 'Mystery Quest', cursive;      /* importing this specific font from google fonts */
+    padding: 1.0rem;                            /* padding around the text */
+    text-align: center;
+    font-size: 3rem;
+
+    color: rgb(54, 43, 43);
+}
+
+#header {
+    background-color: rgb(255, 227, 232);
+    width: 100%;
+    height: 100px;
+}
+
+.mystery-quest-regular {
+  font-family: "Mystery Quest", system-ui;
+  font-weight: 400;
+  font-style: normal;
+}
