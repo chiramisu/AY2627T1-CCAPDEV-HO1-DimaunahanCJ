@@ -3,7 +3,8 @@
 
 ### Changelog
 - September 14, 2026, 9:20 PM: Final commit for HO1 & submitted to canvas
-- September 15, 2026: 11:30 PM Added CSS
+- September 15, 2026, 11:30 PM: Added CSS
+- September 16, 2026, 4:12 PM: Pushed the (temporary) final first page. Will add elements to the left and right empty spaces of the website if there's time, but the priorities are the center contents in both pages
 
 > Github Pages deployment link [here](https://chiramisu.github.io/AY2627T1-CCAPDEV-HO1-DimaunahanCJ/).
 
