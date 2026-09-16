@@ -150,7 +150,7 @@ hr {
     height: auto;
 }
 
-p, table {
+p, table, ul, li, form {
     font-family: 'Quicksand', system-ui;
 }
 
@@ -205,6 +205,21 @@ table, th, td {
     color: rgb(65, 56, 53);
     font-weight: bold;
 }
+
+/* NEXT PAGE CONTENTS */
+
+#adhika {
+    display: block;
+    width: min(420px, 100%);
+    height: auto;
+    margin: 0;
+    position: relative;
+    left: 43%;
+    transform: translateX(-50%);
+    border: 6px dashed rgb(129, 99, 88);
+    border-radius: 10px;
+}
+
 
 .mystery-quest-regular {
   font-family: "Mystery Quest", system-ui;

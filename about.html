@@ -5,87 +5,110 @@
     </head>
     <body id="top">
         <header>
-            <h1> More about me! </h1>
-            <hr>
+            <h1> more about me! </h1>
         </header>
+        
         <nav>
-            <a href="index.html"> Back to Home </a>
-            <hr>
-        </nav>
-        
-        <main>
-            <section>
-                <h3> Interests: </h3>
-                    <li>
-                        Dancing
-                        <ul> Former ADHIKA Member (2022-2024) </ul>
-                        <ul> Competed in: 
-                            <ul> Dance Supremacy Kings and Queens - High School Division (2023) </ul>
-                            <ul> World of Dance Philippines - High School Division (2023) </ul>
-                            <ul> Ultimate Dance Cup - Open Division (2023) </ul>
-                            <ul> Dance Supremacy Kings and Queens - High School Division (2024) </ul>
-                            <ul> Chosen Grounds 17 - High School Division (2024) </ul>
-                            <ul> 
-                                <video width="320" height="240" controls>
-                                    <source src="media/adhika_finals.mp4" type="video/mp4">
-                                </video>
-                                <br>
-                                World of Dance Finals, Los Angeles (2024) 
-                            </ul>
-                        </ul>
-                        <ul> Currently an AJA Animo Member (DLSU's KPOP org!) </ul>
-                    </li>
-                    <li>
-                        Games
-                        <ul> Genshin Impact </ul>
-                        <ul> Roblox </ul>
-                        <ul> Fortnite </ul>
-                        <ul> Minecraft </ul>
-                    </li>
-                    <li>
-                        Anime/Manga
-                        <ul> Jujutsu Kaisen </ul>
-                        <ul> The Guy She Was Interested In Wasn't a Guy At All </ul>
-                        <ul> NANA </ul>
-                    </li>
-                    <li>
-                        Writing
-                        <ul> I write fanfics lmfao </ul>
-                    </li>
-            </section>
-        
-            <section>
-                <!-- Fav song atm -->
-                <hr>
-                <h3> On Repeat: </h3>
-                <h4> Nobody - Daniel J </h4>
-                <audio controls>
-                    <source src="media/Nobody.mp3" type="audio/mpeg">
-                </audio>
-            </section>
             
-            <section id="contact">
-                <!-- Contact -->
+            <a class="nav-links" href="index.html">home</a> 
+            <a class="nav-links" href="index.html">previous page</a> 
+            <a class="nav-links" href="#socials">socials</a>
+            <a class="nav-links" href="about.html#contact">contact</a>
+ 
+        </nav>
+
+        <hr id="lace">
+        
+        <div id="content">
+            <main>
+                <section>
+                    <h2 class="subheader"> Interests: </h2>
+                    <ul>
+                        <li>Dancing
+                            <ul>
+                                <li>Former ADHIKA Member (2022-2024)</li>
+                                <li>Competed in:
+                                    <ul>
+                                        <li>Dance Supremacy Kings and Queens - High School Division (2023)</li>
+                                        <li>World of Dance Philippines - High School Division (2023)</li>
+                                        <li>Ultimate Dance Cup - Open Division (2023)</li>
+                                        <li>Dance Supremacy Kings and Queens - High School Division (2024)</li>
+                                        <li>Chosen Grounds 17 - High School Division (2024)</li>
+                                        <li> World of Dance Finals, Los Angeles (2024) </li>
+                                    </ul>
+
+                                        <br>
+                                        <video id="adhika" controls>
+                                            <source src="media/adhika_finals.mp4" type="video/mp4">
+                                        </video>
+                                        <br>
+
+                                </li>
+                                <li>Currently an AJA Animo Member (DLSU's KPOP org!)</li>
+                            </ul>
+                        </li>
+                        <li>Games
+                            <ul>
+                                <li>Genshin Impact</li>
+                                <li>Roblox</li>
+                                <li>Fortnite</li>
+                                <li>Minecraft</li>
+                            </ul>
+                        </li>
+                        <li>Anime/Manga
+                            <ul>
+                                <li>Jujutsu Kaisen</li>
+                                <li>The Guy She Was Interested In Wasn't a Guy At All</li>
+                                <li>NANA</li>
+                            </ul>
+                        </li>
+                        <li>Writing
+                            <ul>
+                                <li>I write fanfics lmfao</li>
+                            </ul>
+                        </li>
+                    </ul>
+                </section>
+            
+                <section>
+                    <!-- Fav song atm -->
+                    <hr>
+                    <h2 class="subheader"> On Repeat: </h2>
+                    <h4> Nobody - Daniel J </h4>
+                    <audio controls>
+                        <source src="media/Nobody.mp3" type="audio/mpeg">
+                    </audio>
+                </section>
+                
+                <section id="contact">
+                    <!-- Contact -->
+                    <hr>
+                    <h4>
+                        Have the same interests as me? Let's be friends! :DD
+                    </h4>
+                    <form action="mailto:dimaunahan.chelseajei@gmail.com" method="post" enctype="text/plain">
+                        <label for="subject"> Subject: </label>
+                        <input type="text" id="subject" name="subject" required>
+                        <br>
+                        <label for="email"> Email: </label>
+                        <input type="email" id="email" name="email" required>
+                        <br>
+                        <label for="message"> Message: </label>
+                        <textarea id="message" name="message" rows="4" cols="50" required></textarea>
+                        <br>
+                        <button type="submit"> Send to email </button>
+                    </form>
+                </section>
                 <hr>
-                <h4>
-                    Have the same interests as me? Let's be friends! :DD
-                </h4>
-                <form action="mailto:dimaunahan.chelseajei@gmail.com" method="post" enctype="text/plain">
-                    <label for="subject"> Subject: </label>
-                    <input type="text" id="subject" name="subject" required>
-                    <br>
-                    <label for="email"> Email: </label>
-                    <input type="email" id="email" name="email" required>
-                    <br>
-                    <label for="message"> Message: </label>
-                    <textarea id="message" name="message" rows="4" cols="50" required></textarea>
-                    <br>
-                    <button type="submit"> Send to email </button>
-                </form>
-            </section>
-        </main>
+                <a class="back-to-top" href="#top"> back to top </a>
+            </main>
+        </div>
        
-        <hr>
-            <a href="#top"> Back to top </a>
+        <nav>
+            <a class="nav-links" id="socials" href="https://www.instagram.com/c.084x"> instagram </a>
+            <a class="nav-links" id="socials" href="https://www.tiktok.com/@chiramisu.cake"> tiktok </a>
+            <a class="nav-links" id="socials" href="https://substack.com/@merlotesque"> substack </a>
+            <a class="nav-links" id="socials" href="https://github.com/chiramisu"> github </a>
+        </nav>
     </body>
 </html>
