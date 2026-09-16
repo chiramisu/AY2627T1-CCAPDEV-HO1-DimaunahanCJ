@@ -1,28 +1,209 @@
 /* importing from google fonts */
 @import url('https://fonts.googleapis.com/css2?family=Mystery+Quest&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Quicksand&display=swap');
+
+/* NOTES:
+    - important colors i'll reuse 
+        - pink: rgb(255, 227, 232);
+        - light cream: #fcf8ef;
+        - brown: rgb(129, 99, 88);
+*/
 
 body {
     background-image: url(../media/background_polka.jpeg);  /* .. in the path to go back to the directory */
-    background-size: 45%;                                   /* if i did cover/100% the dots would be too big */
+    background-size: 450px 280px;                           /* fixed size so the dots dont shrink with the tab */
     background-attachment: fixed;                           /* keeps it static while scrolling */
 
     /* if ever the image doesn't load, the website will resort to this color: */
     background-color: #fcf8ef;                            /* light cream? color */                       
 }
 
-h1 {
-    font-family: 'Mystery Quest', cursive;      /* importing this specific font from google fonts */
-    padding: 1.0rem;                            /* padding around the text */
-    text-align: center;
-    font-size: 3rem;
-
-    color: rgb(54, 43, 43);
+#header {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    min-height: 100px;
+    height: 125px;
 }
 
-#header {
-    background-color: rgb(255, 227, 232);
-    width: 100%;
+h1 {
+    font-family: 'Mystery Quest', cursive;      /* importing this specific font from google fonts */
+    text-align: left;
+    font-size: 5rem;
+    margin-top: 0.1rem;
+    margin-bottom: 0.1rem;
+    color: rgb(65, 56, 53);
+}
+
+#lace {
+    margin: 0 auto;
+    height: 65px;
+    background-image: url(../media/lace.png);
+    background-repeat: repeat-x;
+    background-size: auto 65px;
+    background-position: left center;
+
+    border: none;
+}
+
+nav {
+    margin: 0 auto;
+    margin-top: 10px;
+}
+
+.nav-links {
+    display: inline-block;
+    padding: 5px 10px;
+    text-decoration: none;
+    color: rgb(65, 56, 53);
+    font-weight: bold;
+    margin-top: 0;
+}
+
+nav, #content {
+    border: 3px solid white;
+    background-color: rgb(255, 227, 232); 
+    box-shadow: 0 0 10px rgba(0, 0, 0, 0.5);
+    color: rgb(65, 56, 53);
+}
+
+#content {
+    position: relative;
+    background-color: rgb(255, 227, 232);  
+    width: 45%;
+    margin: 0 auto;
+    height: auto;
+    padding-bottom: 10px 10px;
+}
+
+#content h2 {
+    margin-top: 0;
+    margin-bottom: 0;
+    text-align: center;
+}
+
+.info-left, .info-right {
+    padding-bottom: 15px;
+    font-size: 1.2rem;
+}
+
+.info-left {
+    text-align: left;
+    margin-left: 20px;
+}
+
+.info-right {
+    text-align: right;
+    margin-right: 20px;
+}
+
+hr {
+    border: 2px solid white;
+    margin-top: 7px;
+    margin-bottom: 7px;
+}
+
+.subheader {
+    font-family: 'Mystery Quest', cursive;
+    font-size: 2.5rem;
+    margin-bottom: 0;
+}
+
+.subheader#pets {
+    margin-top: 10px;
+    margin-bottom: 0;
+    font-size: 1.5rem;
+}
+
+.icon {
+    position: absolute;
+    z-index: 10;
+}
+
+.icon#bow {
+    width: 100px;       
     height: 100px;
+    top: 590px;
+    left: 600px;       
+}
+
+.icon#heart {
+    width: 100px;       
+    height: 100px;
+    top: 550px;
+    left: 900px;       
+}
+
+.icon#cat {
+    width: 150px;       
+    height: 150px;
+    top: 250px;
+    left: 915px;       
+}
+
+.pic-left {
+    float: left;
+    margin-left: 15px;
+    margin-right: 10px;
+    margin-bottom: 10px;
+    width: min(250px, 38vw);
+    height: auto;
+}
+
+p, table {
+    font-family: 'Quicksand', system-ui;
+}
+
+table, th, td {
+    margin: 0 auto;
+    text-align: center;
+    border-collapse: collapse;
+    padding: 5px 5px;
+}
+
+/* pet pics */
+.pets {
+    width: 150px;
+    height: 150px;
+    margin: 0 auto;
+    margin-top: 10px;
+    display: block;
+    border: 6px dotted #fcf8ef;
+    border-radius: 10px;
+    transition: transform 0.3s ease-in-out;
+    position: relative;
+}
+
+.pets:hover {
+    transform: scale(1.15);
+    z-index: 1;
+}
+
+.pets#mochi:hover {
+    content: url(../media/pets/mochi2.jpg);
+}
+
+.pets#tanya:hover {
+    content: url(../media/pets/tanya2.jpg);
+}
+
+.pets#earl:hover {
+    content: url(../media/pets/earl2.jpg);
+}
+
+.pet_names {
+    font-size: 1.2rem;
+    font-weight: bold;
+    font-family: times, system-ui;
+}
+
+.back-to-top {
+    display: block;
+    text-align: center;
+    padding: 2px 10px;
+    text-decoration: none;
+    color: rgb(65, 56, 53);
+    font-weight: bold;
 }
 
 .mystery-quest-regular {
