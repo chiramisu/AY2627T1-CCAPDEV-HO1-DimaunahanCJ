@@ -436,13 +436,14 @@ table, th, td {
 #music-player h4 {
     grid-column: 2;
     grid-row: 1;
-    margin: 0 0 12px;
+    margin: 0 auto;
 }
 
 #music-player audio {
     grid-column: 2;
     display: block;
     width: 100%;
+    margin: 0 auto;
 }
 
 .icon#dr-grace {
