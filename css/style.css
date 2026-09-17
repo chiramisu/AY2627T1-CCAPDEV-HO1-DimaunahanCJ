@@ -10,12 +10,18 @@
 */
 
 body {
+    min-width: 1200px;
+    overflow-x: auto;
     background-image: url(../media/background_polka.jpeg);  /* .. in the path to go back to the directory */
     background-size: 450px 280px;                           /* fixed size so the dots dont shrink with the tab */
     background-attachment: fixed;                           /* keeps it static while scrolling */
 
     /* if ever the image doesn't load, the website will resort to this color: */
     background-color: #fcf8ef;                            /* light cream? color */                       
+}
+
+html {
+    scroll-behavior: smooth;
 }
 
 #header {
@@ -80,6 +86,10 @@ nav, .content {
     padding-bottom: 10px 10px;
 }
 
+#content {
+    width: 650px;
+}
+
 .content h2 {
     margin-top: 0;
     margin-bottom: 0;
@@ -127,22 +137,35 @@ hr {
 .icon#bow {
     width: 100px;       
     height: 100px;
-    top: 590px;
-    left: 600px;       
+    top: 345px;
+    left: 210px;
 }
 
 .icon#heart {
     width: 100px;       
     height: 100px;
-    top: 550px;
-    left: 900px;       
+    top: 300px;
+    right: 45px;
 }
 
 .icon#cat {
     width: 150px;       
     height: 150px;
-    top: 250px;
-    left: 915px;       
+    top: 10px;
+    right: 10px;
+}
+
+#content #cat {
+    z-index: 0;
+}
+
+#content > h2,
+#content > .pic-left,
+#content > p,
+#content > hr,
+#content > table {
+    position: relative;
+    z-index: 1;
 }
 
 .pic-left {
@@ -154,7 +177,7 @@ hr {
     height: auto;
 }
 
-p, table, ul, li, form {
+p, table, ul, li, form, .pet-card {
     font-family: 'Quicksand', system-ui;
 }
 
@@ -166,6 +189,17 @@ table, th, td {
 }
 
 /* pet pics */
+.pet-list {
+    display: grid;
+    grid-template-columns: repeat(3, 1fr);
+    gap: 10px;
+    text-align: center;
+}
+
+.pet-card {
+    min-width: 0;
+}
+
 .pets {
     width: 150px;
     height: 150px;
@@ -211,12 +245,21 @@ table, th, td {
     position: absolute;
     width: 200px;       
     height: 200px;
-    top: 20%;
-    left: 43%;
-    z-index: -1;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    z-index: 0;
+}
+
+.interests-heading {
+    position: relative;
+    width: 200px;
+    margin: 0 auto;
 }
 
 .subheader#interests {
+    position: relative;
+    z-index: 1;
     margin: 0 auto;
     text-align: center;
     width: 200px;
@@ -230,49 +273,71 @@ table, th, td {
     text-align: center;
 }
 
-.interest-layout {
+.interests-layout {
     display: grid;
     grid-template-columns: repeat(2, minmax(0, 1fr));
     gap: 30px;
-    width: min(1100px, calc(100% - 40px));
+    width: 1100px;
     margin: 20px auto;
     align-items: start;
 }
 
-.interest-layout .content {
+.interests-layout .content {
     width: 100%;
     margin: 0;
 }
 
-.interest-layout #cont1 {
+.interests-layout #cont1 {
+    position: relative;
     grid-column: 1;
     grid-row: 1;
 }
 
-.interest-layout #adhika {
+.interests-layout #adhika {
     grid-column: 2;
     grid-row: 1;
 }
 
-.interest-layout aside {
+.interests-layout aside {
     grid-column: 1;
     grid-row: 2;
 }
 
-.interest-layout #cont2 {
+.interests-layout #cont2 {
     position: relative;
     grid-column: 2;
     grid-row: 2;
 }
 
-.interest-layout #cont3 {
+.interests-layout #cont3 {
     grid-column: 1;
     grid-row: 3;
 }
 
-.interest-layout #cont4 {
+.interests-layout #hachi {
+    grid-column: 2;
+    grid-row: 3;
+    align-self: center;
+    justify-self: center;
+    width: min(100%, 420px);
+    height: auto;
+    border-radius: 12px;
+    box-shadow: 0 0 10px rgba(0, 0, 0, 0.5);
+}
+
+.interests-layout #cont4 {
+    position: relative;
     grid-column: 2;
     grid-row: 4;
+}
+
+.interests-layout #polaroid {
+    grid-column: 1;
+    grid-row: 4;
+    align-self: center;
+    justify-self: center;
+    width: min(100%, 420px);
+    height: auto;
 }
 
 #cont1, #cont2, #cont3, #cont4 {
@@ -350,6 +415,9 @@ table, th, td {
     border: 3px solid white;
     border-radius: 12px;
     display: grid;
+    grid-template-columns: 110px minmax(0, 1fr);
+    grid-template-rows: auto auto;
+    align-items: center;
     gap: 12px 16px;
     width: 90%;
     margin-top: 25px;
@@ -363,6 +431,7 @@ table, th, td {
 #music-player #prima {
     grid-column: 1;
     grid-row: 1 / span 2;
+    justify-self: center;
 }
 
 #music-player h4 {
@@ -390,8 +459,7 @@ table, th, td {
     position: absolute;
     width: 150px;       
     height: 150px;
-    top: 141%;
-    left: 74%;
+    top: -119px;
     z-index: 10;
 }
 
@@ -400,3 +468,85 @@ table, th, td {
   font-weight: 400;
   font-style: normal;
 }
+
+@view-transition {
+    navigation: auto;
+}
+
+/* stack the content and icons on smaller screens (im using my macbook air size
+as reference...), but keep the display on my macbook for its screen size and bigger*/
+
+@media (max-width: 1199px) {
+    body {
+        min-width: 0;
+    }
+
+    body > header h1 {
+        font-size: clamp(2.2rem, 10vw, 5rem);
+    }
+
+    body > section {
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+    }
+
+    body > section > .icon {
+        position: static;
+        margin: 10px auto;
+    }
+
+    #content,
+    body > section > .content {
+        width: calc(100% - 40px);
+    }
+
+    .content {
+        width: calc(100% - 40px);
+    }
+
+    .interest-layout {
+        grid-template-columns: 1fr;
+        width: calc(100% - 40px);
+        margin: 20px auto;
+    }
+
+    .interest-layout #cont1,
+    .interest-layout #adhika,
+    .interest-layout aside,
+    .interest-layout #cont2,
+    .interest-layout #cont3,
+    .interest-layout #hachi,
+    .interest-layout #cont4,
+    .interest-layout #polaroid {
+        grid-column: 1;
+        grid-row: auto;
+    }
+
+    .interest-layout .content,
+    .interest-layout aside,
+    .interest-layout #adhika {
+        width: 100%;
+    }
+
+    .interest-layout #adhika {
+        top: 0;
+        left: 0;
+    }
+
+    .interest-layout #hachi,
+    .interest-layout #polaroid {
+        width: min(100%, 420px);
+    }
+
+    #music-player {
+        width: 100%;
+        margin: 0;
+    }
+
+    .pet-list {
+        grid-template-columns: 1fr;
+        gap: 20px;
+    }
+}
+

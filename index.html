@@ -22,11 +22,10 @@
         <hr id="lace">
 
         <section>
-            <img class="icon" id="bow" src="media/icons/bow.png" alt="bow icon" />
-            <img class="icon" id="heart" src="media/icons/heart.png" alt="heart icon" />
-            <img class="icon" id="cat" src="media/icons/cat.png" alt="cat icon" />
-
-            <div class="content">
+            <div class="content" id="content">
+                <img class="icon" id="bow" src="media/icons/bow.png" alt="bow icon" />
+                <img class="icon" id="heart" src="media/icons/heart.png" alt="heart icon" />
+                <img class="icon" id="cat" src="media/icons/cat.png" alt="cat icon" />
                 <h2 class="subheader"> information about me :p </h2>
                     <!-- Picture -->
                     <img class="pic-left" src="media/personalPic.JPG" alt="My picture" />
@@ -58,38 +57,26 @@
 
                 <!-- Pets -->
                 <h2 class="subheader" id="pets"> my pets :p </h2>
-                    <table>
-                        <tr>
-                            <!-- Images of my pets -->
-                            <th> 
-                                <img class="pets" id="mochi" src="media/pets/mochi1.jpg" alt="Mochi"> 
-                            </th>
-                            <th>
-                                <img class="pets" id="tanya" src="media/pets/tanya1.jpg" alt="Tanya">
-                            </th>
-                            <th>
-                                <img class="pets" id="earl" src="media/pets/earl1.jpg" alt="Earl">
-                            </th>
-                        </tr>
-                        <tr>
-                            <!-- Pet names -->
-                            <td class="pet_names"> mochi </td>
-                            <td class="pet_names"> tanya </td>
-                            <td class="pet_names"> earl </td>
-                        </tr>
-                        <tr>
-                            <!-- Pet breeds -->
-                            <td> shih tzu </td>
-                            <td> belgian malinois </td>
-                            <td> british shorthair </td>
-                        </tr>
-                        <tr> 
-                            <!-- Pet birthdays -->
-                            <td> 02/05/2020 </td>
-                            <td> 08/06/2021 </td>
-                            <td> 08/27/2025 </td>
-                        </tr>
-                    </table>
+                <div class="pet-list">
+                    <div class="pet-card">
+                        <img class="pets" id="mochi" src="media/pets/mochi1.jpg" alt="Mochi">
+                        <div class="pet_names">mochi</div>
+                        <div>shih tzu</div>
+                        <div>02/05/2020</div>
+                    </div>
+                    <div class="pet-card">
+                        <img class="pets" id="tanya" src="media/pets/tanya1.jpg" alt="Tanya">
+                        <div class="pet_names">tanya</div>
+                        <div>belgian malinois</div>
+                        <div>08/06/2021</div>
+                    </div>
+                    <div class="pet-card">
+                        <img class="pets" id="earl" src="media/pets/earl1.jpg" alt="Earl">
+                        <div class="pet_names">earl</div>
+                        <div>british shorthair</div>
+                        <div>08/27/2025</div>
+                    </div>
+                </div>
 
             </div>
         </section>
@@ -97,6 +84,7 @@
         <nav>
             <a class="nav-links" id="socials" href="https://www.instagram.com/c.084x"> instagram </a>
             <a class="nav-links" id="socials" href="https://www.tiktok.com/@chiramisu.cake"> tiktok </a>
+            <a class="nav-links" id="socials" href="https://letterboxd.com/ss4pphic/"> letterboxd </a>
             <a class="nav-links" id="socials" href="https://substack.com/@merlotesque"> substack </a>
             <a class="nav-links" id="socials" href="https://github.com/chiramisu"> github </a>
             <a class="nav-links back-to-top" href="#top"> back to top </a>
