@@ -20,6 +20,10 @@ body {
     background-color: #fcf8ef;                            /* light cream? color */           
 }
 
+*, *::before, *::after {
+    box-sizing: border-box;
+}
+
 html {
     scroll-behavior: smooth;
 }
@@ -101,11 +105,6 @@ nav, .content {
     font-size: 1.2rem;
 }
 
-.info-left {
-    text-align: left;
-    margin-left: 20px;
-}
-
 .info-right {
     text-align: right;
     margin-right: 20px;
@@ -135,16 +134,16 @@ hr {
 }
 
 .icon#bow {
-    width: 100px;       
+    width: 100px;
     height: 100px;
     top: 345px;
     left: 210px;
 }
 
 .icon#heart {
-    width: 100px;       
-    height: 100px;
-    top: 300px;
+    width: 140px;       
+    height: 140px;
+    top: 275px;
     right: 45px;
 }
 
@@ -155,7 +154,7 @@ hr {
     right: 10px;
 }
 
-#content #cat {
+#content #cat, #content #heart {
     z-index: 0;
 }
 
@@ -499,48 +498,59 @@ as reference...), but keep the display on my macbook for its screen size and big
     #content,
     body > section > .content {
         width: calc(100% - 40px);
+        margin-left: auto;
+        margin-right: auto;
     }
 
     .content {
         width: calc(100% - 40px);
     }
 
-    .interest-layout {
+    nav {
+        width: calc(100% - 40px);
+        margin-left: auto;
+        margin-right: auto;
+    }
+
+    .interests-layout {
         grid-template-columns: 1fr;
         width: calc(100% - 40px);
         margin: 20px auto;
     }
 
-    .interest-layout #cont1,
-    .interest-layout #adhika,
-    .interest-layout aside,
-    .interest-layout #cont2,
-    .interest-layout #cont3,
-    .interest-layout #hachi,
-    .interest-layout #cont4,
-    .interest-layout #polaroid {
+    .interests-layout #cont1,
+    .interests-layout #adhika,
+    .interests-layout aside,
+    .interests-layout #cont2,
+    .interests-layout #cont3,
+    .interests-layout #hachi,
+    .interests-layout #cont4,
+    .interests-layout #polaroid {
         grid-column: 1;
         grid-row: auto;
     }
 
-    .interest-layout .content,
-    .interest-layout aside,
-    .interest-layout #adhika {
+    .interests-layout .content,
+    .interests-layout aside,
+    .interests-layout #adhika {
         width: 100%;
+        max-width: 100%;
     }
 
-    .interest-layout #adhika {
+    .interests-layout #adhika {
         top: 0;
         left: 0;
     }
 
-    .interest-layout #hachi,
-    .interest-layout #polaroid {
+    .interests-layout #hachi,
+    .interests-layout #polaroid {
         width: min(100%, 420px);
+        max-width: 100%;
     }
 
     #music-player {
         width: 100%;
+        max-width: 100%;
         margin: 0;
     }
 
