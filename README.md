@@ -5,6 +5,8 @@
 - September 14, 2026, 9:20 PM: Final commit for HO1 & submitted to canvas
 - September 15, 2026, 11:30 PM: Added CSS
 - September 16, 2026, 4:12 PM: Pushed the (temporary) final first page. Will add elements to the left and right empty spaces of the website if there's time, but the priorities are the center contents in both pages
+- September 17, 2026, 8:53 PM: Changed the layout of the about.html page
+- September 17, 2026, 11:15 PM: Pushed the final commit. 
 
 > Github Pages deployment link [here](https://chiramisu.github.io/AY2627T1-CCAPDEV-HO1-DimaunahanCJ/).
 
@@ -23,5 +25,3 @@ As part of the specifications, we are required to implement:
     1. image;
     2. audio; and
     3. video.
-
-This current Hands On Activity does not allow the use of CSS or any styling, nor is any backend logic needed.
