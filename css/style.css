@@ -17,7 +17,9 @@ body {
     background-attachment: fixed;                           /* keeps it static while scrolling */
 
     /* if ever the image doesn't load, the website will resort to this color: */
-    background-color: #fcf8ef;                            /* light cream? color */                       
+    background-color: #fcf8ef;                            /* light cream? color */           
+    
+    animation: fadeInPage 1s ease-in-out;
 }
 
 html {
@@ -471,6 +473,15 @@ table, th, td {
 
 @view-transition {
     navigation: auto;
+}
+
+@keyframes fadeInPage {
+    from {
+        opacity: 0;
+    }
+    to {
+        opacity: 1;
+    }
 }
 
 /* stack the content and icons on smaller screens (im using my macbook air size
