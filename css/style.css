@@ -47,6 +47,10 @@ h1 {
 }
 
 nav {
+    position: relative;
+    display: flex;
+    align-items: center;
+    flex-wrap: wrap;
     margin: 0 auto;
     margin-top: 10px;
 }
@@ -60,14 +64,14 @@ nav {
     margin-top: 0;
 }
 
-nav, #content {
+nav, .content {
     border: 3px solid white;
     background-color: rgb(255, 227, 232); 
     box-shadow: 0 0 10px rgba(0, 0, 0, 0.5);
     color: rgb(65, 56, 53);
 }
 
-#content {
+.content {
     position: relative;
     background-color: rgb(255, 227, 232);  
     width: 45%;
@@ -76,7 +80,7 @@ nav, #content {
     padding-bottom: 10px 10px;
 }
 
-#content h2 {
+.content h2 {
     margin-top: 0;
     margin-bottom: 0;
     text-align: center;
@@ -198,28 +202,198 @@ table, th, td {
 }
 
 .back-to-top {
-    display: block;
-    text-align: center;
-    padding: 2px 10px;
-    text-decoration: none;
-    color: rgb(65, 56, 53);
-    font-weight: bold;
+    margin-left: auto;
 }
 
 /* NEXT PAGE CONTENTS */
+
+.icon#heart-lace {
+    position: absolute;
+    width: 200px;       
+    height: 200px;
+    top: 20%;
+    left: 43%;
+    z-index: -1;
+}
+
+.subheader#interests {
+    margin: 0 auto;
+    text-align: center;
+    width: 200px;
+    border-radius: 100px;
+}
+
+.hdr-interests {
+    font-family: 'Mystery Quest', cursive;
+    font-size: 2rem;
+    margin-bottom: 0;
+    text-align: center;
+}
+
+.interest-layout {
+    display: grid;
+    grid-template-columns: repeat(2, minmax(0, 1fr));
+    gap: 30px;
+    width: min(1100px, calc(100% - 40px));
+    margin: 20px auto;
+    align-items: start;
+}
+
+.interest-layout .content {
+    width: 100%;
+    margin: 0;
+}
+
+.interest-layout #cont1 {
+    grid-column: 1;
+    grid-row: 1;
+}
+
+.interest-layout #adhika {
+    grid-column: 2;
+    grid-row: 1;
+}
+
+.interest-layout aside {
+    grid-column: 1;
+    grid-row: 2;
+}
+
+.interest-layout #cont2 {
+    position: relative;
+    grid-column: 2;
+    grid-row: 2;
+}
+
+.interest-layout #cont3 {
+    grid-column: 1;
+    grid-row: 3;
+}
+
+.interest-layout #cont4 {
+    grid-column: 2;
+    grid-row: 4;
+}
+
+#cont1, #cont2, #cont3, #cont4 {
+    border-radius: 50px;
+}
+
+#contact {
+    padding: 20px;
+}
+
+#contact h4 {
+    margin: 0 0 18px;
+    text-align: center;
+    font-family: 'Quicksand', system-ui;
+    font-size: 1.1rem;
+}
+
+.email-button {
+    display: block;
+    width: fit-content;
+    margin: 0 auto;
+    margin-top: 8px;
+    border: 2px solid white;
+    border-radius: 20px;
+    padding: 8px 18px;
+    background-color: rgb(65, 56, 53);
+    color: white;
+    font: bold 1rem 'Quicksand', system-ui;
+    cursor: pointer;
+    text-decoration: none;
+}
+
+.email-button:hover {
+    background-color: #ed2e8d;
+}
 
 #adhika {
     display: block;
     width: min(420px, 100%);
     height: auto;
-    margin: 0;
+    margin: 0 auto;
     position: relative;
-    left: 43%;
-    transform: translateX(-50%);
-    border: 6px dashed rgb(129, 99, 88);
+    top: 45px;
+    left: 10px;
+    box-shadow: 0 0 10px rgba(0, 0, 0, 0.5);
     border-radius: 10px;
 }
 
+.icon#roblox {
+    position: absolute;
+    width: 300px;       
+    height: auto;
+    top: -65px;
+    right: -45px;
+    z-index: 2;
+}
+
+.icon#prima {
+    position: static;
+    width: 110px;       
+    height: 110px;
+    display: block;
+    object-fit: cover;
+    margin: 0;
+}
+
+#adela {
+    text-align: center;
+    position: static;
+    font-size: 1.5rem;
+    font-weight: bold;
+}
+
+#music-player {
+    border: 3px solid white;
+    border-radius: 12px;
+    display: grid;
+    gap: 12px 16px;
+    width: 90%;
+    margin-top: 25px;
+    margin-left: 10px;
+    padding: 15px;
+    background-color: #ed2e8d;
+    box-shadow: 0 0 10px rgba(0, 0, 0, 0.5);
+    text-align: left;
+}
+
+#music-player #prima {
+    grid-column: 1;
+    grid-row: 1 / span 2;
+}
+
+#music-player h4 {
+    grid-column: 2;
+    grid-row: 1;
+    margin: 0 0 12px;
+}
+
+#music-player audio {
+    grid-column: 2;
+    display: block;
+    width: 100%;
+}
+
+.icon#dr-grace {
+    position: absolute;
+    width: 300px;       
+    height: 300px;
+    top: 22%;
+    left: 42%;
+    z-index: 10;
+}
+
+.icon#cat-icon {
+    position: absolute;
+    width: 150px;       
+    height: 150px;
+    top: 141%;
+    left: 74%;
+    z-index: 10;
+}
 
 .mystery-quest-regular {
   font-family: "Mystery Quest", system-ui;

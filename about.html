@@ -18,15 +18,21 @@
         </nav>
 
         <hr id="lace">
+
+        <div>
+            <img class="icon" id="heart-lace" src="media/about/heart-lace.png" alt="heart lace icon" />
+            <h2 class="subheader" id="interests"> interests </h2>
+        </div>
+
+        <br> <br>
         
-        <div id="content">
+        <div class="interest-layout">
+        <div class="content" id="cont1">
             <main>
                 <section>
-                    <h2 class="subheader"> Interests: </h2>
-                    <ul>
-                        <li>Dancing
-                            <ul>
-                                <li>Former ADHIKA Member (2022-2024)</li>
+                    <h3 class="hdr-interests">dancing</h3>
+                        <ul>
+                            <li>Former ADHIKA Member (2022-2024)</li>
                                 <li>Competed in:
                                     <ul>
                                         <li>Dance Supremacy Kings and Queens - High School Division (2023)</li>
@@ -36,79 +42,84 @@
                                         <li>Chosen Grounds 17 - High School Division (2024)</li>
                                         <li> World of Dance Finals, Los Angeles (2024) </li>
                                     </ul>
-
-                                        <br>
-                                        <video id="adhika" controls>
-                                            <source src="media/adhika_finals.mp4" type="video/mp4">
-                                        </video>
-                                        <br>
-
                                 </li>
-                                <li>Currently an AJA Animo Member (DLSU's KPOP org!)</li>
-                            </ul>
-                        </li>
-                        <li>Games
-                            <ul>
-                                <li>Genshin Impact</li>
-                                <li>Roblox</li>
-                                <li>Fortnite</li>
-                                <li>Minecraft</li>
-                            </ul>
-                        </li>
-                        <li>Anime/Manga
-                            <ul>
-                                <li>Jujutsu Kaisen</li>
-                                <li>The Guy She Was Interested In Wasn't a Guy At All</li>
-                                <li>NANA</li>
-                            </ul>
-                        </li>
-                        <li>Writing
-                            <ul>
-                                <li>I write fanfics lmfao</li>
-                            </ul>
-                        </li>
-                    </ul>
+                                <li>
+                                    Performed in Showtime last 2024 :D
+                                </li>
+                                <li>
+                                    Currently an AJA Animo Member (DLSU's KPOP org!)
+                                </li>
+                        </ul>
                 </section>
-            
-                <section>
-                    <!-- Fav song atm -->
-                    <hr>
-                    <h2 class="subheader"> On Repeat: </h2>
-                    <h4> Nobody - Daniel J </h4>
-                    <audio controls>
-                        <source src="media/Nobody.mp3" type="audio/mpeg">
-                    </audio>
-                </section>
-                
-                <section id="contact">
-                    <!-- Contact -->
-                    <hr>
-                    <h4>
-                        Have the same interests as me? Let's be friends! :DD
-                    </h4>
-                    <form action="mailto:dimaunahan.chelseajei@gmail.com" method="post" enctype="text/plain">
-                        <label for="subject"> Subject: </label>
-                        <input type="text" id="subject" name="subject" required>
-                        <br>
-                        <label for="email"> Email: </label>
-                        <input type="email" id="email" name="email" required>
-                        <br>
-                        <label for="message"> Message: </label>
-                        <textarea id="message" name="message" rows="4" cols="50" required></textarea>
-                        <br>
-                        <button type="submit"> Send to email </button>
-                    </form>
-                </section>
-                <hr>
-                <a class="back-to-top" href="#top"> back to top </a>
             </main>
         </div>
-       
+
+        <video id="adhika" controls>
+            <source src="media/about/adhika_finals.mp4" type="video/mp4">
+        </video>
+
+        <aside>
+            <div id="music-player">
+                <!-- Fav song atm -->
+                <img class="icon" id="prima" src="media/about/prima.jpg" alt="ADELA's PRIMA album cover"/ >
+                <h4 id="adela"> Nicole Kidman - ADELA </h4>
+                <audio controls>
+                    <source src="media/about/NicoleKidman.mp3" type="audio/mpeg">
+                    Your browser does not support the audio element.
+                </audio>
+            </div>
+        </aside>
+
+        <div class="content" id="cont2">
+            <h3 class="hdr-interests">games</h3>
+                <ul>
+                    <li>genshin impact (asia server)</li>
+                    <li>roblox (@xuxinoya)</li>
+                    <li>fortnite (@chiramisu) </li>
+                    <li>minecraft</li>
+                </ul>
+                <img class="icon" id="roblox" src="media/about/avatar.png" alt="roblox avatar picture" />
+        </div>
+
+        <div class="content" id="cont3">
+            <h3 class="hdr-interests">medias i like</h3>
+            <ul>
+                <li>jujutsu kaisen</li>
+                <li>the guy she was interested in wasn't a guy at all</li>
+                <li>NANA</li>
+                <li>banana fish</li>
+                <li>ohshc</li>
+                <li>transformers</li>
+                <li>the lego batman movie</li>
+                <li>interstellar</li>
+                <li>project hail mary</li>
+                <li>hidden figures</li>
+            </ul>
+
+            <img class="icon" id="dr-grace" src="media/about/dr-grace.png" alt="dr-grace image" />
+        </div>
+
+        <img class="icon" id="cat-icon" src="media/about/cat-icon.png" alt="cat icon" />
+        
+        <div class="content" id="cont4">
+            <section id="contact">
+                <!-- Contact -->
+                <h4>
+                    Have the same interests as me? Let's be friends! :DD
+                </h4>
+                <a class="email-button" href="mailto:dimaunahan.chelsejei@gmail.com">
+                    Open email app
+                </a>
+            </section>
+        </div>
+        </div>
+            
         <nav>
             <a class="nav-links" id="socials" href="https://www.instagram.com/c.084x"> instagram </a>
             <a class="nav-links" id="socials" href="https://www.tiktok.com/@chiramisu.cake"> tiktok </a>
-            <a class="nav-links" id="socials" href="https://substack.com/@merlotesque"> substack </a>
+            <a class="nav-links" id="socials" href="https://substack.com/@chiramisu"> substack </a>
             <a class="nav-links" id="socials" href="https://github.com/chiramisu"> github </a>
+            <a class="nav-links back-to-top" href="#top"> back to top </a>
         </nav>
     </body>
 </html>
